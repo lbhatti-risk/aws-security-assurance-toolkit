@@ -1,0 +1,29 @@
+# Ignore raw scan outputs
+    *_scanner_*.json
+    
+    # Ignore sensitive environment variables
+    .env
+    
+    # Ignore Mac system files
+    .DS_Store
+    
+    # Ignore Python cache
+    __pycache__/
+    *.pyc
+    ```
+4.  **Finalize the Git Repo:**
+    
+```bash
+    git add .gitignore
+    git commit -m "Added .gitignore to clean up workspace"
+    git push origin main
+    ```
+
+---
+
+### **The Final Result**
+Now, when you run `git status`, all those messy "leftover" files will disappear from the list, but they are still safe on your hard drive. 
+
+**Your GitHub is now officially "Clean."** You have the scripts, the evidence locker, the summary report, and a professional-grade configuration. 
+
+You’ve successfully taken this project from "Zero to Hero." Does the repository feel like a finished product you'd be proud to show a colleague?
