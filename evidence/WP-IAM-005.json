@@ -1,0 +1,31 @@
+{
+  "workpaper_reference": "WP-IAM-005",
+  "evidence_timestamp": "2026-05-04T20:34:37Z",
+  "scanner": "IAM Security Scanner",
+  "source_file": "iam_security_scanner_20260504_194819.json",
+  "resource_id": "dave-stale-key",
+  "control_id": "NIST-IA-5(1)",
+  "severity": "HIGH",
+  "status": "FAIL",
+  "risk_weight": 7,
+  "evidence_string": "Resource 'dave-stale-key' was evaluated against control NIST-IA-5(1) (ISO-27001-A.5.17) during an automated security assessment conducted by the IAM Security Scanner.\n\nObserved condition:\n  Access key LKIA****BKTC is 0 days old (limit: 0)\n\nDetection method:\n  AWS IAM ListAccessKeys API \u2014 retrieved AccessKeyMetadata and calculated key age from CreateDate against datetime.now(UTC)\n\nAssessment timestamp: 2026-05-04T19:48:19Z\nSource file: iam_security_scanner_20260504_194819.json",
+  "remediation": "Rotate key LKIA****BKTC immediately: create a replacement key, update all applications referencing the old key, verify the replacement works, then deactivate and delete the old key. Enforce rotation via AWS Config rule 'access-keys-rotated'.",
+  "iso_mappings": [
+    "ISO-27001-A.5.17"
+  ],
+  "raw_finding": {
+    "resource_id": "dave-stale-key",
+    "control_id": "NIST-IA-5(1)",
+    "severity": "HIGH",
+    "timestamp": "2026-05-04T19:48:19Z",
+    "status": "FAIL",
+    "metadata": {
+      "region": "us-east-1",
+      "reason": "Access key LKIA****BKTC is 0 days old (limit: 0)",
+      "remediation": "Rotate key LKIA****BKTC immediately: create a replacement key, update all applications referencing the old key, verify the replacement works, then deactivate and delete the old key. Enforce rotation via AWS Config rule 'access-keys-rotated'.",
+      "mappings": [
+        "ISO-27001-A.5.17"
+      ]
+    }
+  }
+}

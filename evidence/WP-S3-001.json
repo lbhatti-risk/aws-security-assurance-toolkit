@@ -1,0 +1,31 @@
+{
+  "workpaper_reference": "WP-S3-001",
+  "evidence_timestamp": "2026-05-04T20:34:37Z",
+  "scanner": "S3 Security Scanner",
+  "source_file": "s3_security_scanner_20260504_194648.json",
+  "resource_id": "pwc-leaky-bucket",
+  "control_id": "NIST-PR.DS-01",
+  "severity": "HIGH",
+  "status": "FAIL",
+  "risk_weight": 7,
+  "evidence_string": "Resource 'pwc-leaky-bucket' was evaluated against control NIST-PR.DS-01 (ISO-27001-A.8.3) during an automated security assessment conducted by the S3 Security Scanner.\n\nObserved condition:\n  Block Public Access partially disabled: BlockPublicAcls, IgnorePublicAcls, BlockPublicPolicy, RestrictPublicBuckets\n\nDetection method:\n  AWS S3 GetPublicAccessBlock API \u2014 evaluated BlockPublicAcls, IgnorePublicAcls, BlockPublicPolicy, and RestrictPublicBuckets flags\n\nAssessment timestamp: 2026-05-04T19:46:48Z\nSource file: s3_security_scanner_20260504_194648.json",
+  "remediation": "Re-run s3:PutPublicAccessBlock and set BlockPublicAcls, IgnorePublicAcls, BlockPublicPolicy, RestrictPublicBuckets to True.",
+  "iso_mappings": [
+    "ISO-27001-A.8.3"
+  ],
+  "raw_finding": {
+    "resource_id": "pwc-leaky-bucket",
+    "control_id": "NIST-PR.DS-01",
+    "severity": "HIGH",
+    "timestamp": "2026-05-04T19:46:48Z",
+    "status": "FAIL",
+    "metadata": {
+      "region": "us-east-1",
+      "reason": "Block Public Access partially disabled: BlockPublicAcls, IgnorePublicAcls, BlockPublicPolicy, RestrictPublicBuckets",
+      "remediation": "Re-run s3:PutPublicAccessBlock and set BlockPublicAcls, IgnorePublicAcls, BlockPublicPolicy, RestrictPublicBuckets to True.",
+      "mappings": [
+        "ISO-27001-A.8.3"
+      ]
+    }
+  }
+}
